@@ -50,3 +50,11 @@ ivanit@vbox:/home/ivanit/Ter/ter-homeworks-main/01/src# cat terraform.tfstate
   "resources": [],
   "check_results": null
 }
+
+### Задача 3.8
+Объясните, почему при этом не был удалён docker-образ nginx:latest. Ответ ОБЯЗАТЕЛЬНО НАЙДИТЕ В ПРЕДОСТАВЛЕННОМ КОДЕ, а затем ОБЯЗАТЕЛЬНО ПОДКРЕПИТЕ строчкой из документации terraform провайдера docker. (ищите в классификаторе resource docker_image )
+#### Ответ:
+resource "docker_image""my_1st_resource" {
+  name         = "nginx:latest"
+  keep_locally = true
+keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.

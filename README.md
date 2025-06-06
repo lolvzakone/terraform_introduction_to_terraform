@@ -30,3 +30,7 @@ resource "docker_container" "nginx" {
 
 
 ![image](https://github.com/user-attachments/assets/3319c271-35bd-4811-8bb0-e397db4573b9)
+### Задача 3.6
+Замените имя docker-контейнера в блоке кода на hello_world. Не перепутайте имя контейнера и имя образа. Мы всё ещё продолжаем использовать name = "nginx:latest". Выполните команду terraform apply -auto-approve. Объясните своими словами, в чём может быть опасность применения ключа -auto-approve. Догадайтесь или нагуглите зачем может пригодиться данный ключ? В качестве ответа дополнительно приложите вывод команды docker ps.
+#### Ответ:
+![image](https://github.com/user-attachments/assets/8c33b14e-1e1a-4c4f-a39a-c46102a88105)

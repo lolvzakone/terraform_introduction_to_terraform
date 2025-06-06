@@ -8,4 +8,25 @@ personal.auto.tfvars , данный файл подходит для хране�
 ### Задача 3.3
 Выполните код проекта. Найдите в state-файле секретное содержимое созданного ресурса random_password, пришлите в качестве ответа конкретный ключ и его значение.
 #### Ответ:
-"result": "vWfm8O92pX5zVNEV",
+"result": "vWfm8O92pX5zVNEV"
+### Задача 3.5
+Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды docker ps.
+#### Ответ:
+
+resource "docker_image""my_1st_resource" {
+  name         = "nginx:latest"
+  keep_locally = true
+}
+
+resource "docker_container" "nginx" {
+  image = docker_image.my_1st_resource.image_id
+  name  = "example_${random_password.random_string.result}"
+
+  ports {
+    internal = 80
+    external = 9090
+  }
+}
+
+
+![image](https://github.com/user-attachments/assets/3319c271-35bd-4811-8bb0-e397db4573b9)

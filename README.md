@@ -35,3 +35,18 @@ resource "docker_container" "nginx" {
 #### Ответ:
 ключ -auto-approve используется для  выполнения кода без  подтверждений. Может быть опасен если  тераформ будет выполнять код который меняет или удаляет  какие то компоненты. Данный ключ нужен если код уже проверен и   можно исключить ручной ввод подтверждения.
 ![image](https://github.com/user-attachments/assets/8c33b14e-1e1a-4c4f-a39a-c46102a88105)
+
+
+### Задача 3.7
+Уничтожьте созданные ресурсы с помощью terraform. Убедитесь, что все ресурсы удалены. Приложите содержимое файла terraform.tfstate.
+#### Ответ:
+ivanit@vbox:/home/ivanit/Ter/ter-homeworks-main/01/src# cat terraform.tfstate
+{
+  "version": 4,
+  "terraform_version": "1.9.8",
+  "serial": 16,
+  "lineage": "e84a61ca-b46f-79a3-4a2b-bff323b50d0d",
+  "outputs": {},
+  "resources": [],
+  "check_results": null
+}
